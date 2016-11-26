@@ -34,7 +34,7 @@ var div = d3.select("body")
 
 function createLink(id) {
   var url = 'http://www.proximity2nature.com/parks/#' + id;
-  window.location = url;
+  parent.window.location = url;
 }
 
 // Load in my states data!
