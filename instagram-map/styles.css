@@ -1,0 +1,15 @@
+html, body, #map {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+}
+
+.leaflet-tooltip {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 0;
+  box-shadow: 0 0 30px #fff;
+  /*text-shadow: 0 0 2px #eaeaea;*/
+  color: #001f3f;
+  font-size: 14px;
+  border: none;
+}

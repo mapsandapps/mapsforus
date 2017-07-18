@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="847px" height="1018px" viewBox="0 0 847 1018" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>Oval Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <filter x="-25.0%" y="-18.8%" width="150.0%" height="137.5%" filterUnits="objectBoundingBox" id="filter-1">
+            <feGaussianBlur stdDeviation="50" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Icon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop" transform="translate(-88.000000, 0.000000)" fill="#7D7D7D">
+            <path d="M512.016752,912 C512.016752,912 812.033504,577.711429 812.033504,412.016752 C812.033504,246.322075 677.711429,112 512.016752,112 C346.322075,112 212,246.322075 212,412.016752 C212,577.711429 512.016752,912 512.016752,912 Z" id="Oval-Copy" filter="url(#filter-1)"></path>
+        </g>
+    </g>
+</svg>
