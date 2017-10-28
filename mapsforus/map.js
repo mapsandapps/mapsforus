@@ -63,6 +63,16 @@ window.onload = function () {
     return layers;
   }
 
+  var logoMarker = L.icon({
+    iconUrl: 'images/marker.png',
+    iconSize: [50, 50],
+    iconAnchor: [25, 50],
+    shadowUrl: 'images/shadow3.png',
+    shadowSize: [50, 50],
+    shadowAnchor: [25, 50],
+    popupAnchor: [0, -50]
+  });
+
   // only run this after Tabletop has loaded (onTabletopLoad())
   function mapPoints(points, layers) {
     var markerArray = [];
@@ -71,7 +81,7 @@ window.onload = function () {
       var point = points[i];
       if (point.Latitude !== "" && point.Longitude !== "") {
         var marker = L.marker([point.Latitude, point.Longitude], {
-          icon: createMarkerIcon(point['Marker Icon'], 'fa', point['Marker Color'].toLowerCase(), point['Marker Icon Color'])
+          icon: logoMarker
         }).bindPopup("<b>" + point["Title"] + "</b><br>" + point["Description"]);
         if (layers !== undefined && layers.length !== 1) {
           marker.addTo(layers[point.Layer]);
@@ -140,11 +150,10 @@ window.onload = function () {
       .setContent(info)
       .openOn(map);
   }
-  
-  function addBaseMap() {
-    var basemap = documentSettings["Tile Provider:"] === '' ? 'Stamen.TonerLite' : documentSettings["Tile Provider:"];
 
-    L.tileLayer.provider(basemap, {
+  function addBaseMap() {
+
+    L.tileLayer('https://api.mapbox.com/styles/v1/mapsandapps/cj9bj48ts4cza2rn2avra7xjt/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwc2FuZGFwcHMiLCJhIjoiY2o4YWpvYzJ5MGdpbDJxcDd0bzI5MDIwNiJ9.LimJsR1bhO-BQW80SlCiAQ', {
       maxZoom: 18
     }).addTo(map);
 
