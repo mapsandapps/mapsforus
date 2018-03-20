@@ -43,7 +43,6 @@ function constructBody(resp) {
 
 window.onload = function() {
   hotspotID = getParameterByName('hotspot');
-  console.log(hotspotID);
 
   axios.get(`https://ebird.org/ws1.1/data/obs/hotspot/recent?r=${hotspotID}&back=30&fmt=json&includeProvisional=true`)
   .then(function (resp) {
