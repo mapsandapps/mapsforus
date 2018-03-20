@@ -1,0 +1,11 @@
+#ebird {
+  font-family: 'Sorts Mill Goudy', Georgia, 'Times New Roman', Times, serif;
+  color: #424242;
+  font-size: 20px;
+}
+#ebird a, a:link, a:visited {
+  color: #55d391;
+}
+#ebird a:active, a:hover {
+  color: #595959;
+}
