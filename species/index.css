@@ -1,0 +1,26 @@
+.cards {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 328px);
+  grid-gap: 30px;
+  justify-content: space-evenly;
+  margin: 0 auto 30px;
+}
+
+.card {
+  text-align: center;
+  border: 4px solid #55d391;
+  background-color: #55d391;
+}
+
+.image {
+  width: 320px;
+  height: 320px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position-x: center;
+}
+
+.title {
+  text-decoration: none;
+}
