@@ -1,3 +1,7 @@
+var API_KEY = '0f7476e73ab8d0c500a4b66c3067c82f';
+var SPECIES_PHOTOSET = '72157664978226738';
+var USER_ID = '149638594%40N05';
+
 function constructBody(resp) {
   var divContent = [];
   _.forEach(resp.data.photoset.photo, function(value, key) {
@@ -12,7 +16,7 @@ function constructBody(resp) {
 }
 
 window.onload = function() {
-  axios.get(`https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=9235f6b91ca70e11855227102ea1f01a&photoset_id=72157664978226738&user_id=149638594%40N05&extras=&media=&format=json&nojsoncallback=1`)
+  axios.get(`https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=${API_KEY}&photoset_id=${SPECIES_PHOTOSET}&user_id=${USER_ID}&extras=&media=&format=json&nojsoncallback=1`)
   .then(function (resp) {
     constructBody(resp);
   })
