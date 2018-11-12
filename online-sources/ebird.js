@@ -44,7 +44,11 @@ function constructBody(resp) {
 window.onload = function() {
   hotspotID = getParameterByName('hotspot');
 
-  axios.get(`https://ebird.org/ws1.1/data/obs/hotspot/recent?r=${hotspotID}&back=30&fmt=json&includeProvisional=true`)
+  axios.get(`https://ebird.org/ws2.0/data/obs/${hotspotID}/recent?back=30&includeProvisional=true`, {
+    headers: {
+      'X-eBirdApiToken': 'se8a8lprdsvn'
+    }
+  })
   .then(function (resp) {
     constructBody(resp);
     constructLink(resp);
